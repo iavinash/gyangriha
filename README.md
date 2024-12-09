@@ -1,5 +1,4 @@
-# gyangriha
-# **Student Subscription Management System**
+# **Gyan-Griha**(Student Subscription Management System)
 
 This project is a comprehensive **Student Subscription Management System** built using **Spring Boot** and **ReactJS**. It allows users to manage subscriptions, attendance, and profiles while providing an admin dashboard for advanced management and monitoring functionalities.
 
