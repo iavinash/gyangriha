@@ -7,24 +7,17 @@ This project is a comprehensive **Student Subscription Management System** built
 ## **Features**
 
 ### **User Management**
-- **User Registration**: 
-  - Fields: Name, Address, Mobile No, Email, Password, and ID Proof.
-  - Configurable discount coupons for signup.
+- **User Registration**
 - **User Login**: 
   - Secure JWT-based authentication and session management.
 - **User Dashboard**: 
   - View subscription details: Type, Amount Paid, Remaining Duration.
-  - Attendance history and renewal countdown.
+  - Attendance history.
 
 ### **Subscription Management**
 - Configurable subscription plans stored in the database:
-  - Monthly: ₹600
-  - Quarterly (3 months): ₹1500
-  - Half-Yearly (6 months): ₹2999
-  - Yearly: ₹5000
-  - Subscription costs can differ per user and are configurable.
 - **Subscription Purchase**:
-  - Integrated payment gateway (Stripe/PayPal).
+  - Integrated payment gateway.
   - Receipt generation and email confirmation.
 - **Subscription Renewal**:
   - Automatic reminders and manual renewal options.
@@ -32,7 +25,7 @@ This project is a comprehensive **Student Subscription Management System** built
   - User-initiated or admin-initiated cancellations.
 
 ### **Attendance Management**
-- Attendance marking (manual or automated with QR code scanning).
+- Attendance marking
 - Real-time attendance status.
 - Admin dashboard for viewing, analyzing, and exporting attendance data.
 
@@ -41,7 +34,7 @@ This project is a comprehensive **Student Subscription Management System** built
   - By mobile number, name, email, or ID Proof number.
 - **User Management**:
   - Paginated table of subscriptions sorted by expiration.
-  - Update or delete user details with audit logging.
+  - Update or delete user details
   - Send reminders (SMS/Email) for subscription renewals.
 - **Attendance Management**:
   - Mark and analyze attendance data.
