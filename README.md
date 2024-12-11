@@ -70,8 +70,7 @@ This project is a comprehensive **Student Subscription Management System** built
 ### **Backend Setup**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/student-subscription-management.git
-   cd student-subscription-management/backend
+   git clone https://github.com/iavinash/gyangriha.git
    ```
 2. Configure the `application.properties` file for your database:
    ```properties
