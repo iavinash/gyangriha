@@ -39,6 +39,7 @@ public class User {
     @Column(nullable = false, unique = true, length = 15)
     private String mobileNo;
 
+    @Getter
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
@@ -52,6 +53,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Getter
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
     private Role role = Role.USER;
@@ -63,9 +65,6 @@ public class User {
     @Column(nullable = false)
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-
-    public User() {
-    }
 
     public User(String name, String address, String mobileNo, String email, String idProofNo, IdProofType idProofType, String password, Role role) {
         this.name = name;
@@ -89,102 +88,4 @@ public class User {
         //this.password = new BCryptPasswordEncoder().encode(dto.getPassword());
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public User setId(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public User setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public User setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-
-    public String getMobileNo() {
-        return mobileNo;
-    }
-
-    public User setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
-        return this;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public User setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-
-    public String getIdProofNo() {
-        return idProofNo;
-    }
-
-    public User setIdProofNo(String idProofNo) {
-        this.idProofNo = idProofNo;
-        return this;
-    }
-
-    public IdProofType getIdProofType() {
-        return idProofType;
-    }
-
-    public User setIdProofType(IdProofType idProofType) {
-        this.idProofType = idProofType;
-        return this;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public User setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public User setRole(Role role) {
-        this.role = role;
-        return this;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public User setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-        return this;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public User setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-        return this;
-    }
 }
