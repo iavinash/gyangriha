@@ -1,9 +1,17 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
 HELP.md
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+.settings/
+target/
 
 ### STS ###
 .apt_generated
