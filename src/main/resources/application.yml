@@ -5,6 +5,13 @@ spring:
   application:
     name: gyangriha
 
+  mvc:
+    static-path-pattern: /**
+
+  web:
+    resources:
+      add-mappings: true
+
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver

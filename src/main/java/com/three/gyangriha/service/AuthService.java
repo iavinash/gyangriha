@@ -1,7 +1,7 @@
 package com.three.gyangriha.service;
 
-import com.three.gyangriha.model.dto.LoginRequestDto;
-import com.three.gyangriha.model.dto.UserRegistrationDto;
+import com.three.gyangriha.model.dto.LoginRequestDTO;
+import com.three.gyangriha.model.dto.UserRegistrationDTO;
 import com.three.gyangriha.model.entity.User;
 import com.three.gyangriha.repo.UserRepository;
 import com.three.gyangriha.security.JwtUtil;
@@ -17,7 +17,7 @@ public class AuthService {
     @Autowired
     private JwtUtil jwtUtil;
 
-    public void registerUser(UserRegistrationDto dto) {
+    public void registerUser(UserRegistrationDTO dto) {
         if (userRepository.existsByEmail(dto.getEmail())) {
             throw new RuntimeException("Email already exists");
         }
@@ -26,7 +26,7 @@ public class AuthService {
         userRepository.save(user);
     }
 
-    public String login(LoginRequestDto dto) {
+    public String login(LoginRequestDTO dto) {
         User user = userRepository.findByEmail(dto.getEmail())
                 .orElseThrow(() -> new RuntimeException("Invalid email or password"));
         if (!new BCryptPasswordEncoder().matches(dto.getPassword(), user.getPassword())) {

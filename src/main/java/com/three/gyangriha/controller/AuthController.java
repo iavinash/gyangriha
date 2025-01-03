@@ -1,8 +1,8 @@
 package com.three.gyangriha.controller;
 
-import com.three.gyangriha.model.dto.LoginRequestDto;
-import com.three.gyangriha.model.dto.UserRegistrationDto;
-import com.three.gyangriha.model.dto.UserResponseDto;
+import com.three.gyangriha.model.dto.LoginRequestDTO;
+import com.three.gyangriha.model.dto.UserRegistrationDTO;
+import com.three.gyangriha.model.dto.UserResponseDTO;
 import com.three.gyangriha.security.JwtTokenProvider;
 import com.three.gyangriha.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public class AuthController {
     private UserService userService;
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequestDto loginRequest) {
+    public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequestDTO loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getEmail(),
@@ -52,7 +52,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<UserResponseDto> register(@RequestBody UserRegistrationDto userDto) {
+    public ResponseEntity<UserResponseDTO> register(@RequestBody UserRegistrationDTO userDto) {
         return ResponseEntity.ok(userService.registerUser(userDto));
     }
 }
