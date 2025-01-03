@@ -155,7 +155,6 @@ This project is a comprehensive **Student Subscription Management System** built
 2. Includes test cases for:
    - User registration and login.
    - JWT authentication and protected routes.
-   - Subscription management and reminders.
 
 ---
 
